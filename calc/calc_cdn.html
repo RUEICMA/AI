@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>加法計算機</title>
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+</head>
+
+<body>
+<form>
+    <label for="num1">被加數：</label>
+    <input type="text" name="num1" id="num1"><br>
+    <label for="num2">加數：</label>
+    <input type="text" name="num2" id="num2"><br>
+    <p>
+    <input type="button" name="calc" id="calc" value="計算">
+    <a href="#" id="link">計算</a>
+  </p>
+  <p>
+    <label for="result">結果：</label>
+    <input type="text" name="result" id="result">
+  </p>
+</form>
+<script>
+$(function(){
+  function cal() {
+    var num1 = $("#num1").val();
+    var num2 = $("#num2").val();
+
+    $("#result").val(Number(num1) + Number(num2));
+    
+    return false;
+  }
+
+  $("#calc").click(cal);
+  $("#link").click(cal);
+});
+</script>
+</body>
+</html>
